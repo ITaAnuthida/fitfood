@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-arv&1ooie!n#@&ar%9u$)p&*sk5e*cj(k2w1i*u)5_5z7!s91z')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']  # เปลี่ยนเป็น domain ของคุณใน production
+ALLOWED_HOSTS = ['ITaAnuthida.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
