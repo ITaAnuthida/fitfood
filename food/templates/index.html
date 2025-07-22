@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>หน้าแรก | เว็บแจกสูตรอาหาร</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e3f6f5 0%, #f9f9f9 100%);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #43bccd 60%, #3aafa9 100%);
+      color: #fff;
+      padding: 40px 20px 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(67,188,205,0.08);
+    }
+    header img {
+      width: 80px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 6px rgba(67,188,205,0.15));
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px 30px 30px 30px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(67,188,205,0.10);
+      text-align: center;
+    }
+    .intro {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #3aafa9;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+    .feature-card {
+      background: #e3f6f5;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(67,188,205,0.07);
+      padding: 22px 18px;
+      width: 220px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.15s;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(67,188,205,0.13);
+    }
+    .feature-card span {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .feature-card p {
+      margin: 0;
+      color: #333;
+      font-size: 1em;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 38px;
+      background: linear-gradient(90deg, #43bccd 60%, #3aafa9 100%);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.15em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(67,188,205,0.10);
+      transition: background 0.2s, transform 0.15s;
+    }
+    a.button:hover {
+      background: linear-gradient(90deg, #3aafa9 60%, #43bccd 100%);
+      transform: translateY(-2px) scale(1.04);
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 20px 5vw;
+      }
+      .features {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .feature-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="อาหาร" />
+    <h1>ยินดีต้อนรับสู่เว็บแจกสูตรอาหาร</h1>
+    <p>แหล่งรวมสูตรอาหารทำง่าย อร่อยทุกมื้อ!</p>
+  </header>
+  <main>
+    <div class="intro">
+      ค้นพบสูตรอาหารไทยและนานาชาติที่คัดสรรมาแล้ว พร้อมเคล็ดลับการทำอาหารสำหรับมือใหม่และมือโปร
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <span>🍲</span>
+        <p>สูตรอาหารยอดนิยม<br>พร้อมวิธีทำทีละขั้นตอน</p>
+      </div>
+      <div class="feature-card">
+        <span>⏱️</span>
+        <p>ใช้วัตถุดิบง่าย ๆ<br>ประหยัดเวลาในทุกมื้อ</p>
+      </div>
+      <div class="feature-card">
+        <span>🌱</span>
+        <p>มีเมนูสุขภาพ<br>และเมนูสำหรับสายคลีน</p>
+      </div>
+      <div class="feature-card">
+        <span>📱</span>
+        <p>รองรับมือถือ<br>ใช้งานง่ายทุกอุปกรณ์</p>
+      </div>
+    </div>
+    <h2>เริ่มต้นทำอาหารกันเลย!</h2>
+    <p>คลิกปุ่มด้านล่างเพื่อดูสูตรอาหารแสนอร่อยและเคล็ดลับพิเศษ</p>
+    <a href="{% url 'food' %}" class="button">ดูสูตรอาหาร</a>
+  </main>
+</body>
+</html>
